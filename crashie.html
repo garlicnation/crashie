@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<div id="idiv"></div>
+
+  <script>
+  var idiv = document.querySelector("#idiv");
+  for (var i = 0; i < 100000; i++) {
+    document.implementation.createHTMLDocument("import");
+    idiv.textContent=i;
+    console.log(i);
+  }
+  </script>
+</body>
+</html>
