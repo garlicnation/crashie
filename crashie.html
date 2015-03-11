@@ -1,17 +1,24 @@
 <!doctype html>
 <html>
 <head>
+<!--   <script src="../webcomponents.js"></script> -->
+  <script>
+  window.setTimeout(function(){
+    var idiv = document.querySelector("#idiv");
+    for (var i = 0; i < 100000; i++) {
+      // window.setTimeout(function(){
+      var z = document.implementation.createHTMLDocument("import");
+      if (i % 100 == 0) {
+        idiv.textContent=i;
+        console.log(i);
+      }
+      // }, i/10);
+    }
+  }, 1000);
+  </script>
 </head>
 <body>
-<div id="idiv"></div>
+<div id="idiv">blah</div>
 
-  <script>
-  var idiv = document.querySelector("#idiv");
-  for (var i = 0; i < 100000; i++) {
-    document.implementation.createHTMLDocument("import");
-    idiv.textContent=i;
-    console.log(i);
-  }
-  </script>
 </body>
 </html>
