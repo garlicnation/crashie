@@ -5,9 +5,10 @@
   <script>
   window.setTimeout(function(){
     var idiv = document.querySelector("#idiv");
+    var mother = document.implementation.createHTMLDocument("import");
     for (var i = 0; i < 100000; i++) {
       // window.setTimeout(function(){
-      var z = document.implementation.createHTMLDocument("import");
+      var z = mother.cloneNode();
       if (i % 100 == 0) {
         idiv.textContent=i;
         console.log(i);
